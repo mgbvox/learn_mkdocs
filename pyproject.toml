@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "learn-mkdocs"
+version = "0.1.0"
+description = ""
+authors = ["mgbvox <mgbvox@gmail.com>"]
+readme = "README.md"
+packages = [{include = "learn_mkdocs"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocstrings = {version = "^0.24.0", extras = ["python"]}
+mkdocs-material = "^9.5.6"
+watchdog = "^3.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.1"
+mypy = "^1.8.0"
+ruff = "^0.1.14"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
